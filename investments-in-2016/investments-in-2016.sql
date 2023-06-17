@@ -1,0 +1,7 @@
+# Write your MySQL query statement below
+SELECT ROUND(SUM(tiv_2016),2) AS TIV_2016 
+FROM Insurance
+WHERE CONCAT(lat,lon) NOT IN (SELECT CONCAT(lat,lon) FROM Insurance GROUP BY LAT, LON HAVING COUNT(CONCAT(lat,lon))>1)
+AND tiv_2015 IN (SELECT tiv_2015 FROM INSURANCE GROUP BY tiv_2015 HAVING COUNT(tiv_2015 )>1)
+
+
