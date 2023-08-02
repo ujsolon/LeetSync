@@ -1,3 +1,4 @@
+##Using itertools, a permutation list was made from the list nums
 import itertools
 class Solution(object):
     def permute(self, nums):
